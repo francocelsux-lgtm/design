@@ -18,10 +18,16 @@ Definir:
 ## Sistema de diseño Celsux (para interfaces de la marca)
 
 Si la interfaz es para Celsux, aplicar:
-- Colores: Negro `#0A0A0A`, Blanco `#F5F5F5`, Rojo `#E8001D`
-- Tipografía display: condensed bold
-- Sin bordes redondeados excesivos — geometría limpia y angular
-- Animaciones con propósito — no decorativas
+- Importar `assets/colors_and_type.css` con path relativo — nunca hardcodear colores ni fuentes.
+- Colores: Negro `#0A0A0A`, Blanco `#F5F5F5`, Rojo `#E8001D`. Máx 3 por pieza.
+- Tipografía (Design System v3 — canónico):
+  - Display: **Anton** — UPPERCASE, -0.01em, lh 0.88, mínimo 72px siempre
+  - Headline: **Oswald 700** — UPPERCASE, 0.02em tracking
+  - Body: **Open Sans 300** — 15–17px, lh 1.65
+  - Label: **DM Mono** — 8–10px, 0.20em tracking, UPPERCASE
+  - Retiradas (nunca usar): ~~DM Sans~~, ~~Barlow Condensed~~, ~~Cormorant~~, ~~Arial~~, ~~Roboto~~, ~~Inter~~
+- Sin bordes redondeados excesivos — 0 en bloques/fotos, 12px cards, 20px paneles, 999px botones.
+- Animaciones con propósito — no decorativas.
 
 ## Principios de ejecución
 

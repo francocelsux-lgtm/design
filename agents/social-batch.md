@@ -22,7 +22,7 @@ tono: [impacto / informativo / behind-the-scenes]
 
 ## Framework de ejecución
 
-### Paso 1: Leer `skills/celsux-brand/brand-prompt.md`
+### Paso 1: Leer `assets/celsux-brand-prompt.md`
 
 ### Paso 2: Generar el copy de cada pieza
 
