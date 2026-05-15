@@ -1,0 +1,25 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #F5F5F5; padding: 16px 20px; font-family: 'DM Mono', monospace; }
+  .grid { display: grid; grid-template-columns: repeat(8, 1fr); gap: 8px; align-items: end; }
+  .token { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+  .bar { background: #0A0A0A; width: 100%; }
+  .name { font-size: 8px; letter-spacing: 0.1em; text-transform: uppercase; color: #6B6B6B; text-align: center; }
+  .val  { font-size: 8px; color: #E8001D; }
+  .divider { border-top: 1px solid #D0D0D0; margin: 12px 0 8px; }
+  .row-label { font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: #6B6B6B; margin-bottom: 8px; }
+</style>
+</head><body>
+<div class="row-label">Spacing Scale</div>
+<div class="grid">
+  <div class="token"><div class="bar" style="height:4px"></div><div class="name">–1</div><div class="val">4px</div></div>
+  <div class="token"><div class="bar" style="height:8px"></div><div class="name">–2</div><div class="val">8px</div></div>
+  <div class="token"><div class="bar" style="height:12px"></div><div class="name">–3</div><div class="val">12px</div></div>
+  <div class="token"><div class="bar" style="height:16px"></div><div class="name">–4</div><div class="val">16px</div></div>
+  <div class="token"><div class="bar" style="height:24px"></div><div class="name">–6</div><div class="val">24px</div></div>
+  <div class="token"><div class="bar" style="height:32px"></div><div class="name">–8</div><div class="val">32px</div></div>
+  <div class="token"><div class="bar" style="height:48px"></div><div class="name">–12</div><div class="val">48px</div></div>
+  <div class="token"><div class="bar" style="height:64px"></div><div class="name">–16</div><div class="val">64px</div></div>
+</div>
+</body></html>

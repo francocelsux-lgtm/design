@@ -1,0 +1,47 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@700&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #F5F5F5; padding: 16px 20px; font-family: 'DM Mono', monospace; }
+  .grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+  .el { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; padding: 16px 8px; background: #fff; border: 1px solid #E8E8E8; border-radius: 12px; }
+  .label { font-size: 8px; letter-spacing: 0.12em; text-transform: uppercase; color: #6B6B6B; text-align: center; line-height: 1.4; }
+
+  /* Pill button */
+  .pill { background: #E8001D; color: #F5F5F5; border: none; border-radius: 999px; padding: 7px 16px; font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; }
+
+  /* Card radius preview */
+  .card-r { width: 44px; height: 30px; background: #0A0A0A; border-radius: 12px; }
+
+  /* Ghost number */
+  .ghost-num { font-family: 'Anton', sans-serif; font-size: 40px; color: transparent; -webkit-text-stroke: 1px #0A0A0A; opacity: 0.05; line-height: 1; }
+
+  /* Eyebrow */
+  .eyebrow-el { display: flex; align-items: center; gap: 5px; font-family: 'DM Mono', monospace; font-size: 7px; letter-spacing: 0.15em; text-transform: uppercase; color: #E8001D; }
+
+  /* Red block (radius 0) */
+  .red-block { width: 40px; height: 26px; background: #E8001D; }
+</style>
+</head><body>
+<div class="grid">
+  <div class="el">
+    <button class="pill">Consultar</button>
+    <span class="label">Botón pill<br>radius 999px</span>
+  </div>
+  <div class="el">
+    <div class="card-r"></div>
+    <span class="label">Card<br>radius 12px</span>
+  </div>
+  <div class="el">
+    <div class="red-block"></div>
+    <span class="label">Bloque rojo<br>radius 0</span>
+  </div>
+  <div class="el">
+    <div class="ghost-num">3K</div>
+    <span class="label">Ghost num<br>opacity 0.05</span>
+  </div>
+  <div class="el">
+    <div class="eyebrow-el"><span style="opacity:0.7;letter-spacing:-0.05em">────</span>Label</div>
+    <span class="label">Eyebrow<br>pattern</span>
+  </div>
+</div>
+</body></html>

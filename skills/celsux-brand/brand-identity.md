@@ -1,6 +1,7 @@
 # CELSUX 360 — Brand Identity System
 
 Archivo maestro de identidad visual. Todo output gráfico debe respetar este documento.
+Este archivo refleja el Design System v3 (ZIP: Celsux_360_Design_System_3).
 
 ---
 
@@ -16,76 +17,108 @@ sino agencia que produce emociones reales.
 
 ## PALETA DE COLORES
 
-| Nombre      | Hex       | Uso                                                    |
-|-------------|-----------|--------------------------------------------------------|
-| Rojo Celsux | #E8001D   | Acento dominante. Bloques, highlights, énfasis tipográfico |
-| Negro       | #0A0A0A   | Fondos, texto pesado, contraste total                  |
-| Blanco      | #F5F5F5   | Fondos limpios, texto sobre oscuro                     |
-| Gris medio  | #6B6B6B   | Texto secundario, datos, labels                        |
-| Gris claro  | #D0D0D0   | Líneas, separadores, texturas sutiles                  |
+| Nombre        | Hex       | Uso                                                       |
+|---------------|-----------|-----------------------------------------------------------|
+| Rojo Celsux   | #E8001D   | Único acento. Bloques, highlights, énfasis tipográfico. Máx 20% de la pieza. |
+| Rojo hover    | #B8001A   | Estado hover de botones y elementos interactivos          |
+| Negro         | #0A0A0A   | Fondos, texto pesado, contraste total                     |
+| Blanco        | #F5F5F5   | Fondos limpios, texto sobre oscuro                        |
+| Gris medio    | #6B6B6B   | Texto secundario, datos, labels                           |
+
+**Colores contextuales (NUNCA como base del sistema):**
+- `#003F8A` — piezas de incentive travel únicamente
+- `#1C2B3A` — galas de noche únicamente
+- `#C4873A` — galas de premios únicamente
 
 **Reglas:**
 - Máximo 3 colores por pieza (generalmente: negro + blanco + rojo)
 - El rojo nunca es fondo de página completa — es acento, bloque parcial, elemento gráfico
-- NUNCA usar verde (color anterior de la marca)
+- Área roja: 15–25% del visual total
+- **NUNCA usar verde** (color anterior de la marca, retirado)
+- **NUNCA usar dorado como base**
 
 ---
 
 ## TIPOGRAFÍA
 
-| Nivel      | Uso                          | Estilo                                                      |
-|------------|------------------------------|-------------------------------------------------------------|
-| DISPLAY    | Títulos grandes, impacto     | Ultra-bold condensed, mayúsculas. Bebas Neue, Oswald ExtraBold, Anton |
-| HEADLINE   | Subtítulos, nombres servicio | Bold, tracking ajustado                                     |
-| BODY       | Descripciones, texto cuerpo  | Regular/Light sans-serif. Inter, DM Sans, Open Sans         |
-| LABEL      | Tags, datos, numeración      | Mono o condensed regular, pequeño                           |
+| Nivel    | Fuente           | Estilo                                              |
+|----------|------------------|-----------------------------------------------------|
+| DISPLAY  | **Anton**        | UPPERCASE, -0.01em tracking, lh 0.88, mínimo 72px  |
+| HEADLINE | **Oswald 700**   | UPPERCASE, 0.02em tracking, lh 1.05                |
+| BODY     | **Open Sans 300**| 15–17px, lh 1.65                                    |
+| LABEL    | **DM Mono**      | 8–10px, 0.20em tracking, UPPERCASE                 |
+
+**Google Fonts import:**
+```
+https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;600;700&family=Open+Sans:wght@300;400&family=DM+Mono:wght@400;500&display=swap
+```
 
 **Principios:**
 - La tipografía ES un elemento de diseño, no solo texto
-- Títulos display pueden romperse, apilarse, sangrar fuera del frame
-- Números grandes (años, cantidad de eventos) son elementos visuales
-- Mezcla intencional de pesos: 120pt con 14pt en la misma pieza
-- NUNCA: Arial, Calibri, Roboto, Inter como fuentes principales
+- Títulos display (Anton) pueden romperse, apilarse, sangrar fuera del frame
+- Números grandes (años, cantidad de eventos) son elementos visuales en Anton
+- Contraste extremo de tamaños intencional (ej: 120px título con 9px label)
+
+**RETIRADAS (nunca usar):**
+- ~~Barlow Condensed~~
+- ~~DM Sans~~
+- ~~Cormorant Garamond~~
+- ~~Arial, Calibri, Roboto, Inter como fuentes principales~~
 
 ---
 
 ## SISTEMA DE COMPOSICIÓN
 
-**Contraste extremo:** El layout vive en tensiones — grande vs pequeño, blanco vs negro.
+**Contraste extremo:** El layout vive en tensiones — grande vs pequeño, negro vs blanco.
 
-**Fotografía integrada:** Las fotos no son decoración, son estructura.
-Se pueden cortar en formas geométricas, superponerse con tipografía, convertirse
-en fondo con overlay rojo.
-
-**Tipografía arquitectónica:** Las palabras grandes estructuran el espacio como bloques.
+**Tipografía arquitectónica:** Las palabras grandes en Anton estructuran el espacio como bloques.
 
 **Numeración visible:** Números de sección siempre visibles, como referencia técnica.
 
-**Diagonal como motivo:** Líneas diagonales heredadas del brand. 1 o 2 por pieza máximo.
+**Diagonal como motivo:** Líneas diagonales heredadas del brand. Máximo 1–2 por pieza, ángulo 20–30°.
+
+**Ghost numbers:** Números Anton stroke-only (transparent + stroke), opacity 0.04–0.06, como capa de fondo.
+
+### Fondos
+- Negro sólido o blanco sólido — alternando entre páginas/secciones
+- Sin gradientes full-page; sin texturas complejas
+- Fotos como fondo estructural con B&W + overlay rojo (40–55% opacidad)
 
 ### Overlays fotográficos
-- Foto a B&W + overlay rojo semitransparente (40–60%) = look de marca
+- Foto a B&W + overlay rojo semitransparente (40–55%) = look de marca
 - Foto a color debe estar anclada por un bloque rojo o negro adyacente
 - No usar fotos "flotando" sin ancla visual
+- Preferidas: audiencias, acción, multitudes, oradores. Nunca stock "oficina feliz".
 
 ### Elementos gráficos recurrentes
-- Bloques de color rojo cortados geométricamente (sin redondear)
-- Líneas finas diagonales (motivo heredado, usar con moderación)
+- Bloques de color rojo cortados geométricamente (border-radius: 0)
+- Líneas finas diagonales (motivo heredado, máx 1–2 por pieza)
 - Marcos rectangulares delgados (solo outline)
-- Cruces pequeñas (×) como acento puntual
+- Cruces pequeñas (×) como acento puntual — firma de marca
 - El X del logo como elemento gráfico aislado
+- **Patrón eyebrow:** `──── LABEL TEXT` en DM Mono rojo, siempre antes de títulos de sección
+
+### Border radius
+- `0` — fotos, bloques rojos, elementos estructurales
+- `12px` — cards
+- `20px` — paneles grandes
+- `999px` — todos los botones (pill)
+
+### Geometría
+- Sin esquinas redondeadas excesivas (>20px en contenedores de contenido)
+- Aristas limpias y precisas
 
 ---
 
 ## LOGO
 
-**Versiones:**
-- Logo completo: `celsux.` con el 360 integrado (script + círculo)
-- Isotipo: Solo el `360X`
-- Wordmark: Solo `celsux.`
+**Variantes:**
+- `assets/logo-celsux-white.png` — Wordmark blanco + X rojo. Para fondos oscuros.
+- `assets/logo-celsux-red.png` — Wordmark rojo. Para fondos claros.
+- `assets/logo-celsux-360.png` — Logo completo 360. (Nota: la variante 360 tiene círculo verde del brand anterior; usar con criterio)
 
 **Reglas:**
-- Siempre en blanco sobre fondos oscuros, negro sobre fondos claros
+- Siempre en blanco sobre fondos oscuros, rojo sobre fondos claros
 - Nunca sobre fondos rojos
 - Siempre acompañado de `www.celsux.com.ar` en piezas externas
 
@@ -94,7 +127,7 @@ en fondo con overlay rojo.
 ## VOZ VISUAL POR TIPO DE PIEZA
 
 ### Catálogo de servicios
-- Fondo: negro o blanco (alternar entre páginas)
+- Fondo: negro o blanco (alternando entre páginas)
 - Foto del servicio + overlay + tipo display
 - Nombre del servicio en rojo o blanco bold
 - Descripción en body pequeño
@@ -108,12 +141,12 @@ en fondo con overlay rojo.
 ### Presentaciones comerciales
 - Más blanco, más espacio — contexto formal
 - Grid consistente por slide
-- Datos y números destacados visualmente
+- Datos y números destacados visualmente en Anton
 - Fotos en paneles modulares
 
 ### Materiales de impacto (flyers, portadas)
 - La foto puede ocupar 80% del espacio
-- Tipografía que "rompe" la foto
+- Tipografía en Anton que "rompe" la foto
 - Un elemento rojo obligatorio
 - Mínimo texto, máximo impacto
 
@@ -131,6 +164,25 @@ El lenguaje visual de Celsux se inspira en:
 - Diseño "startup tech" (violetas, blues, esquinas redondeadas)
 - Fondos con muchas texturas o patrones complejos
 - Tipografías decorativas para textos de servicio
+- Startup casual: "¡Hacemos eventos increíbles! 🎉"
+- Corporativo genérico: "Somos líderes en soluciones de eventos..."
+
+---
+
+## VOZ Y TONO
+
+- **Idioma:** Español (Argentina) para todos los materiales
+- **Registro:** Profesional pero enérgico — no frío corporativo, no casual startup
+- **Persona:** Segunda persona directa ("tu evento", "tu empresa")
+- **Casing:** MAYÚSCULAS para display/impact headlines; sentence case para body
+- **Emoji:** Nunca
+- **Números como narrativa:** 25 años, 3.000 eventos, 360° — los números son identidad
+- **Vibe:** Seguro, decisivo, premium. Oraciones cortas. Impacto sobre explicación.
+
+**Ejemplos de copy:**
+- "El número clave para tu evento."
+- "3.000 eventos. 25 años. Una sola agencia."
+- "Producimos experiencias corporativas que se recuerdan."
 
 ---
 
@@ -140,3 +192,5 @@ www.celsux.com.ar
 info@celsux.com.ar
 Celsux 360 — All-in-one agency
 Buenos Aires, Argentina
+
+**Clientes de referencia:** DirecTV, McDonald's, Adidas, LATAM, GSK, Mercado Libre, BBVA

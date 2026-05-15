@@ -1,0 +1,38 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #F5F5F5; font-family: 'DM Mono', monospace; }
+  .row { display: flex; height: 120px; }
+  .swatch { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; padding: 10px 12px; position: relative; overflow: hidden; }
+  .ghost { position: absolute; right: -4px; bottom: -8px; font-family: 'Anton', sans-serif; font-size: 64px; color: transparent; -webkit-text-stroke: 1px currentColor; opacity: 0.05; line-height: 1; user-select: none; }
+  .name { font-size: 10px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; position: relative; z-index: 1; }
+  .hex  { font-size: 9px; opacity: 0.6; margin-top: 2px; position: relative; z-index: 1; }
+  .footer { display: flex; align-items: center; padding: 8px 16px; border-top: 1px solid #E8E8E8; gap: 10px; }
+  .eyebrow { display: flex; align-items: center; gap: 8px; font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: #E8001D; }
+</style>
+</head><body>
+<div class="row">
+  <div class="swatch" style="background:#E8001D; flex:1.2">
+    <div class="ghost" style="color:#F5F5F5">×</div>
+    <span class="name" style="color:#F5F5F5">Rojo Celsux</span>
+    <span class="hex" style="color:#F5F5F5">#E8001D — Accent max 20%</span>
+  </div>
+  <div class="swatch" style="background:#0A0A0A; flex:1.5">
+    <div class="ghost" style="color:#F5F5F5">3K</div>
+    <span class="name" style="color:#F5F5F5">Negro</span>
+    <span class="hex" style="color:#F5F5F5">#0A0A0A — Primary Dark</span>
+  </div>
+  <div class="swatch" style="background:#F5F5F5; border-left: 1px solid #E8E8E8; flex:1.2">
+    <span class="name" style="color:#0A0A0A">Blanco</span>
+    <span class="hex" style="color:#6B6B6B">#F5F5F5 — Primary Light</span>
+  </div>
+  <div class="swatch" style="background:#6B6B6B">
+    <span class="name" style="color:#F5F5F5">Gris</span>
+    <span class="hex" style="color:#F5F5F5">#6B6B6B — Secondary text</span>
+  </div>
+</div>
+<div class="footer">
+  <div class="eyebrow"><span style="opacity:0.7;letter-spacing:-0.05em">────</span> Primary Palette v3</div>
+  <span style="font-size:9px;color:#6B6B6B">Max 3 colors per piece · Red is accent only</span>
+</div>
+</body></html>

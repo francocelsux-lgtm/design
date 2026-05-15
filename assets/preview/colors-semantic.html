@@ -1,0 +1,21 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  body { margin: 0; background: #F5F5F5; font-family: 'DM Mono', monospace; padding: 16px; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .token { background: #fff; border: 1px solid #eee; padding: 10px 12px; display: flex; align-items: center; gap: 10px; }
+  .dot { width: 20px; height: 20px; flex-shrink: 0; }
+  .info { display: flex; flex-direction: column; }
+  .name { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #0A0A0A; font-weight: 500; }
+  .val  { font-size: 9px; color: #6B6B6B; margin-top: 1px; }
+</style>
+</head><body>
+<div class="grid">
+  <div class="token"><div class="dot" style="background:#E8001D"></div><div class="info"><span class="name">--color-accent</span><span class="val">Red #E8001D</span></div></div>
+  <div class="token"><div class="dot" style="background:#0A0A0A"></div><div class="info"><span class="name">--color-bg-dark</span><span class="val">Black #0A0A0A</span></div></div>
+  <div class="token"><div class="dot" style="background:#F5F5F5; border:1px solid #eee"></div><div class="info"><span class="name">--color-bg-light</span><span class="val">White #F5F5F5</span></div></div>
+  <div class="token"><div class="dot" style="background:#0A0A0A"></div><div class="info"><span class="name">--color-fg-primary</span><span class="val">Black #0A0A0A</span></div></div>
+  <div class="token"><div class="dot" style="background:#F5F5F5; border:1px solid #eee"></div><div class="info"><span class="name">--color-fg-on-dark</span><span class="val">White #F5F5F5</span></div></div>
+  <div class="token"><div class="dot" style="background:#6B6B6B"></div><div class="info"><span class="name">--color-fg-secondary</span><span class="val">Gray #6B6B6B</span></div></div>
+</div>
+</body></html>

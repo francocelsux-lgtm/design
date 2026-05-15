@@ -1,0 +1,40 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@700&family=Open+Sans:wght@300&family=DM+Mono&display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #F5F5F5; padding: 0; font-family: 'DM Mono', monospace; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; height: 185px; }
+  .p1 { background: #0A0A0A; padding: 16px; display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden; }
+  .ghost { position: absolute; right: -8px; bottom: -12px; font-family: 'Anton', sans-serif; font-size: 100px; color: transparent; -webkit-text-stroke: 1px #1A1A1A; opacity: 0.05; line-height: 1; user-select: none; }
+  .eyebrow { display: flex; align-items: center; gap: 6px; font-family: 'DM Mono', monospace; font-size: 8px; letter-spacing: 0.18em; text-transform: uppercase; color: #E8001D; }
+  .impact { font-family: 'Anton', sans-serif; font-size: 40px; color: #F5F5F5; line-height: 0.88; text-transform: uppercase; letter-spacing: -0.01em; position: relative; z-index: 2; }
+  .impact span { color: #E8001D; }
+  .sub { font-family: 'DM Mono', monospace; font-size: 7px; letter-spacing: 0.15em; text-transform: uppercase; color: #3A3A3A; }
+  .p2 { background: #F5F5F5; border-left: 1px solid #E8001D; padding: 16px; display: flex; flex-direction: column; justify-content: center; gap: 8px; }
+  .p2-num { font-family: 'Anton', sans-serif; font-size: 60px; color: #E8001D; line-height: 1; letter-spacing: -0.01em; }
+  .p2-label { font-family: 'DM Mono', monospace; font-size: 8px; letter-spacing: 0.18em; text-transform: uppercase; color: #6B6B6B; }
+  .p3 { background: #111; padding: 16px; display: flex; flex-direction: column; justify-content: flex-end; position: relative; overflow: hidden; }
+  .p3-overlay { position: absolute; inset: 0; background: rgba(232,0,29,0.48); mix-blend-mode: multiply; }
+  .p3-bg { position: absolute; inset: 0; background: repeating-linear-gradient(40deg, #1A1A1A 0, #1A1A1A 1px, #111 0, #111 8px); }
+  .p3-title { font-family: 'Anton', sans-serif; font-size: 26px; color: #F5F5F5; text-transform: uppercase; line-height: 0.9; letter-spacing: -0.01em; position: relative; z-index: 2; }
+  .p3-sub { font-family: 'DM Mono', monospace; font-size: 7px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(245,245,245,0.35); margin-top: 8px; position: relative; z-index: 2; }
+</style>
+</head><body>
+<div class="grid">
+  <div class="p1">
+    <div class="ghost">360</div>
+    <div class="eyebrow"><span style="opacity:0.7;letter-spacing:-0.05em">────</span>01 — Display</div>
+    <div class="impact">ALL<br>IN <span>ONE.</span></div>
+    <div class="sub">Anton · ghost bg · eyebrow</div>
+  </div>
+  <div class="p2">
+    <div class="p2-num">3.000</div>
+    <div class="p2-label">Eventos producidos</div>
+  </div>
+  <div class="p3">
+    <div class="p3-bg"></div>
+    <div class="p3-overlay"></div>
+    <div class="p3-title">EVENTOS<br>CORPORATIVOS</div>
+    <div class="p3-sub">B&W base · Red overlay 40–55%</div>
+  </div>
+</div>
+</body></html>
