@@ -1,0 +1,1387 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PLAY & WORK. — Celsux 360</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0A0A0A;
+    --white: #F5F5F5;
+    --red: #E8001D;
+    --gray-mid: #6B6B6B;
+    --gray-light: #D0D0D0;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: #333;
+  }
+
+  .page {
+    width: 794px;
+    height: 1123px;
+    position: relative;
+    overflow: hidden;
+    background: var(--white);
+    display: block;
+    page-break-after: always;
+  }
+
+  /* ─── TYPOGRAPHY ─── */
+  .display {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 0.92;
+    letter-spacing: -0.02em;
+  }
+  .headline {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+  }
+  .label {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 11px;
+  }
+  .body-text {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  /* ─── SHARED ELEMENTS ─── */
+  .page-number {
+    position: absolute;
+    bottom: 32px;
+    right: 40px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    color: var(--gray-mid);
+  }
+
+  .page-logo {
+    position: absolute;
+    bottom: 28px;
+    left: 52px;
+    height: 20px;
+    width: auto;
+    object-fit: contain;
+    opacity: 0.7;
+  }
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+  .section-label .bar {
+    width: 32px;
+    height: 2px;
+    background: var(--red);
+    flex-shrink: 0;
+  }
+  .section-label span {
+    font-family: 'Oswald', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gray-mid);
+  }
+
+  /* ─── CONCENTRIC CIRCLES ─── */
+  .circles {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.12);
+  }
+
+  /* ═══════════════════════════════════════════
+     PAGE 1 — COVER
+  ═══════════════════════════════════════════ */
+  .p1 {
+    background: var(--black);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .p1-left {
+    padding: 52px 48px 52px 52px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+  }
+
+  .logo-img {
+    display: block;
+    height: 28px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .p1-top-label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(245,245,245,0.4);
+  }
+
+  .p1-title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 900;
+    font-size: 148px;
+    line-height: 0.88;
+    text-transform: uppercase;
+    letter-spacing: -0.03em;
+    color: var(--white);
+  }
+  .p1-title .amp {
+    color: var(--red);
+    display: block;
+  }
+
+  .p1-tagline {
+    font-family: 'Oswald', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(245,245,245,0.5);
+    line-height: 1.6;
+  }
+
+  .p1-right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 52px 44px 52px 0;
+    align-items: flex-end;
+  }
+
+  .p1-right-label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--red);
+    text-align: right;
+  }
+
+  .p1-circles-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    height: 320px;
+  }
+
+  .p1-circle {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.1);
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .p1-red-block {
+    width: 56px;
+    height: 56px;
+    background: var(--red);
+    position: absolute;
+    bottom: 52px;
+    right: 44px;
+  }
+
+  /* ═══════════════════════════════════════════
+     PAGE 2 — WELLNESS
+  ═══════════════════════════════════════════ */
+  .p2 {
+    background: var(--white);
+    padding: 52px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .p2-headline {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 900;
+    font-size: 56px;
+    line-height: 0.95;
+    text-transform: uppercase;
+    color: var(--black);
+    letter-spacing: -0.01em;
+    margin-bottom: 14px;
+  }
+
+  .p2-subhead {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 40px;
+  }
+
+  .p2-body-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    flex: 1;
+  }
+
+  .p2-body-cols p {
+    font-size: 13.5px;
+    line-height: 1.7;
+    color: #1a1a1a;
+  }
+
+  .p2-photo {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 340px;
+    height: 200px;
+    background: var(--black);
+    overflow: hidden;
+  }
+
+  .p2-photo-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(232,0,29,0.5);
+    mix-blend-mode: multiply;
+  }
+
+  .p2-stat {
+    position: absolute;
+    bottom: 64px;
+    right: 52px;
+    text-align: right;
+  }
+
+  .p2-stat-number {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 900;
+    font-size: 80px;
+    line-height: 0.9;
+    color: var(--black);
+    letter-spacing: -0.03em;
+  }
+
+  .p2-stat-label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gray-mid);
+  }
+
+  /* ═══════════════════════════════════════════
+     PAGE 3 — CONCEPTO
+  ═══════════════════════════════════════════ */
+  .p3 {
+    background: var(--black);
+    padding: 52px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .p3-title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 900;
+    font-size: 100px;
+    line-height: 0.88;
+    text-transform: uppercase;
+    color: var(--white);
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .p3-subhead {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 44px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .p3-body-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .p3-body-cols p {
+    font-size: 13px;
+    line-height: 1.7;
+    color: rgba(245,245,245,0.75);
+  }
+
+  .p3-body-cols p + p {
+    margin-top: 16px;
+  }
+
+  .p3-circles-wrap {
+    position: absolute;
+    top: 40px;
+    right: -60px;
+    width: 360px;
+    height: 360px;
+    z-index: 1;
+  }
+
+  .p3-red-sq {
+    position: absolute;
+    top: 52px;
+    right: 52px;
+    width: 18px;
+    height: 18px;
+    background: var(--red);
+    z-index: 3;
+  }
+
+  /* ═══════════════════════════════════════════
+     PAGE 4 — DEPORTES
+  ═══════════════════════════════════════════ */
+  .p4 {
+    background: var(--white);
+    padding: 52px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .p4-headline {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 900;
+    font-size: 36px;
+    text-transform: uppercase;
+    color: var(--black);
+    letter-spacing: -0.01em;
+    margin-bottom: 36px;
+    line-height: 1;
+  }
+
+  .sports-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+    flex: 1;
+  }
+
+  .sport-card {
+    background: var(--black);
+    padding: 28px 28px 24px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 150px;
+  }
+
+  .sport-card.featured {
+    grid-column: span 1;
+  }
+
+  .sport-num {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 900;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: rgba(245,245,245,0.3);
+    margin-bottom: 6px;
+  }
+
+  .sport-num.featured-num {
+    color: var(--red);
+  }
+
+  .sport-name {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 800;
+    font-size: 28px;
+    text-transform: uppercase;
+    color: var(--white);
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+
+  .sport-desc {
+    font-size: 11.5px;
+    line-height: 1.55;
+    color: rgba(245,245,245,0.6);
+  }
+
+  .sport-card .sport-accent {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    width: 8px;
+    height: 8px;
+    background: var(--red);
+  }
+
+  /* ═══════════════════════════════════════════
+     PAGE 5 — FORMATOS
+  ═══════════════════════════════════════════ */
+  .p5 {
+    background: var(--black);
+    padding: 52px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .p5-title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 900;
+    font-size: 88px;
+    line-height: 0.88;
+    text-transform: uppercase;
+    color: var(--white);
+    letter-spacing: -0.02em;
+    margin-bottom: 56px;
+  }
+
+  .formato-item {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 32px;
+    padding: 32px 0;
+    border-top: 1px solid rgba(245,245,245,0.1);
+    align-items: start;
+  }
+
+  .formato-num {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 900;
+    font-size: 72px;
+    line-height: 1;
+    color: var(--red);
+    letter-spacing: -0.02em;
+  }
+
+  .formato-content {}
+
+  .formato-name {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 10px;
+  }
+
+  .formato-desc {
+    font-size: 13px;
+    line-height: 1.65;
+    color: rgba(245,245,245,0.65);
+  }
+
+  .p5-footer {
+    margin-top: auto;
+    padding-top: 32px;
+    border-top: 1px solid rgba(245,245,245,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .p5-footer-left {
+    font-family: 'Oswald', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(245,245,245,0.35);
+  }
+
+  .p5-footer-brand {
+    font-family: 'Oswald', sans-serif;
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    color: rgba(245,245,245,0.15);
+    text-transform: uppercase;
+  }
+
+  /* ═══════════════════════════════════════════
+     PAGE 6 — PRODUCCIÓN INTEGRAL
+  ═══════════════════════════════════════════ */
+  .p6 {
+    background: var(--black);
+    padding: 52px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .p6-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 44px;
+  }
+
+  .p6-title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 900;
+    font-size: 80px;
+    line-height: 0.88;
+    text-transform: uppercase;
+    color: var(--white);
+    letter-spacing: -0.02em;
+    max-width: 460px;
+  }
+
+  .p6-callout {
+    text-align: right;
+  }
+
+  .p6-callout p {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--red);
+    line-height: 1.5;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    flex: 1;
+  }
+
+  .service-item {
+    padding: 18px 0 18px 0;
+    border-top: 1px solid rgba(245,245,245,0.08);
+    padding-right: 24px;
+  }
+
+  .service-item:nth-child(even) {
+    padding-left: 24px;
+    padding-right: 0;
+    border-left: 1px solid rgba(245,245,245,0.08);
+  }
+
+  .service-name {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 4px;
+  }
+
+  .service-desc {
+    font-size: 11px;
+    line-height: 1.5;
+    color: rgba(245,245,245,0.45);
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+  }
+
+  /* ═══════════════════════════════════════════
+     PAGE 7 — CÓMO TRABAJAMOS
+  ═══════════════════════════════════════════ */
+  .p7 {
+    background: var(--white);
+    padding: 52px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .p7-title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 900;
+    font-size: 96px;
+    line-height: 0.88;
+    text-transform: uppercase;
+    color: var(--black);
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+  }
+
+  .p7-divider {
+    width: 100%;
+    height: 3px;
+    background: var(--red);
+    margin-bottom: 44px;
+  }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3px;
+    flex: 1;
+  }
+
+  .step-item {
+    padding: 36px 32px 36px 0;
+    border-bottom: 1px solid var(--gray-light);
+  }
+
+  .step-item:nth-child(2), .step-item:nth-child(4) {
+    padding-left: 40px;
+    padding-right: 0;
+    border-left: 1px solid var(--gray-light);
+  }
+
+  .step-num {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 900;
+    font-size: 80px;
+    line-height: 0.9;
+    color: var(--black);
+    letter-spacing: -0.03em;
+    margin-bottom: 4px;
+  }
+
+  .step-dot {
+    width: 10px;
+    height: 10px;
+    background: var(--red);
+    margin-bottom: 10px;
+  }
+
+  .step-label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gray-mid);
+    margin-bottom: 8px;
+  }
+
+  .step-name {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--black);
+    margin-bottom: 12px;
+  }
+
+  .step-desc {
+    font-size: 13px;
+    line-height: 1.65;
+    color: #333;
+  }
+
+  /* ═══════════════════════════════════════════
+     PAGE 8 — TRAYECTORIA
+  ═══════════════════════════════════════════ */
+  .p8 {
+    background: var(--black);
+    padding: 52px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .p8-title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 900;
+    font-size: 88px;
+    line-height: 0.88;
+    text-transform: uppercase;
+    color: var(--white);
+    letter-spacing: -0.02em;
+    margin-bottom: 44px;
+  }
+
+  .clients-row {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    border-top: 1px solid rgba(245,245,245,0.15);
+    border-bottom: 1px solid rgba(245,245,245,0.15);
+    padding: 20px 0;
+    margin-bottom: 44px;
+    gap: 0;
+  }
+
+  .client-name {
+    font-family: 'Oswald', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(245,245,245,0.5);
+    border-right: 1px solid rgba(245,245,245,0.1);
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+  }
+
+  .client-name:first-child { padding-left: 0; }
+  .client-name:last-child { border-right: none; }
+
+  .logos-placeholder {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3px;
+    margin-bottom: 44px;
+  }
+
+  .logo-box {
+    background: rgba(255,255,255,0.04);
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .logo-box-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.12);
+    position: relative;
+  }
+
+  .logo-box-circle::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    right: -30px;
+    height: 1px;
+    background: rgba(255,255,255,0.1);
+  }
+
+  .stats-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-top: 1px solid rgba(245,245,245,0.15);
+    gap: 0;
+  }
+
+  .stat-block {
+    padding: 32px 0;
+    border-right: 1px solid rgba(245,245,245,0.1);
+    padding-right: 32px;
+  }
+
+  .stat-block:nth-child(2), .stat-block:nth-child(3) {
+    padding-left: 32px;
+  }
+
+  .stat-block:last-child {
+    border-right: none;
+  }
+
+  .stat-since {
+    font-family: 'Oswald', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 8px;
+  }
+
+  .stat-big {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 900;
+    font-size: 72px;
+    line-height: 0.88;
+    color: var(--white);
+    letter-spacing: -0.02em;
+  }
+
+  .stat-unit {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(245,245,245,0.5);
+    margin-top: 6px;
+  }
+
+  /* ═══════════════════════════════════════════
+     PAGE 9 — CTA + CONTACTO
+  ═══════════════════════════════════════════ */
+  .p9 {
+    background: var(--black);
+    padding: 52px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .p9-red-block {
+    position: absolute;
+    top: 52px;
+    right: 52px;
+    width: 48px;
+    height: 48px;
+    background: var(--red);
+  }
+
+  .p9-title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 900;
+    font-size: 96px;
+    line-height: 0.88;
+    text-transform: uppercase;
+    color: var(--white);
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+  }
+
+  .p9-subhead {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 800;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 52px;
+    line-height: 1.5;
+  }
+
+  .contact-fields {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .contact-field {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 22px 0;
+    border-bottom: 1px solid rgba(245,245,245,0.1);
+  }
+
+  .contact-arrow {
+    color: var(--red);
+    font-size: 18px;
+    font-weight: 700;
+    flex-shrink: 0;
+    font-family: 'Oswald', sans-serif;
+  }
+
+  .contact-field-text {
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(245,245,245,0.5);
+  }
+
+  .p9-footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 32px;
+  }
+
+  .p9-brand {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 900;
+    font-size: 52px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: var(--white);
+    letter-spacing: -0.01em;
+  }
+
+  .p9-brand-sub {
+    font-family: 'Oswald', sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(245,245,245,0.35);
+    margin-top: 4px;
+  }
+
+  .p9-contact-info {
+    text-align: right;
+  }
+
+  .p9-web {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--red);
+  }
+
+  .p9-email {
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    color: rgba(245,245,245,0.4);
+    margin-top: 4px;
+  }
+
+  /* ─── PRINT ─── */
+  @media print {
+    body { background: none; }
+    .page { page-break-after: always; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     PAGE 1 — COVER
+══════════════════════════════════════════ -->
+<div class="page p1">
+  <div class="p1-left">
+    <img src="../../assets/logo-celsux-white.png" class="logo-img" alt="celsux.">
+
+
+    <div class="p1-title">
+      PLAY
+      <span class="amp">&</span>
+      WORK.
+    </div>
+
+    <div class="p1-tagline">
+      TU EQUIPO TRABAJA.<br>
+      JUEGA.<br>
+      VUELVE MÁS FUERTE.
+    </div>
+  </div>
+
+  <div class="p1-right">
+    <div class="p1-right-label">CONECTADOS × EL DEPORTE</div>
+
+    <div class="p1-circles-wrap">
+      <div class="p1-circle" style="width:320px;height:320px;"></div>
+      <div class="p1-circle" style="width:260px;height:260px;"></div>
+      <div class="p1-circle" style="width:200px;height:200px;"></div>
+      <div class="p1-circle" style="width:140px;height:140px;"></div>
+      <div class="p1-circle" style="width:80px;height:80px;"></div>
+    </div>
+
+    <div style="width:1px;height:1px;"></div>
+  </div>
+
+  <div class="p1-red-block"></div>
+  <div class="page-number" style="color:rgba(245,245,245,0.3);">01 / 09</div>
+  <div style="position:absolute;bottom:28px;left:52px;font-family:'Oswald',sans-serif;font-size:9px;font-weight:400;letter-spacing:0.2em;color:rgba(245,245,245,0.3);text-transform:uppercase;">WWW.CELSUX.COM.AR</div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 2 — WELLNESS CORPORATIVO
+══════════════════════════════════════════ -->
+<div class="page p2" style="position:relative;">
+  <div class="section-label" style="margin-bottom:24px;">
+    <div class="bar"></div>
+    <span>El nuevo wellness corporativo</span>
+  </div>
+
+  <div class="p2-headline">EL BENEFICIO QUE TU<br>EQUIPO REALMENTE QUIERE.</div>
+  <div class="p2-subhead">EL BIENESTAR QUE SE SIENTE EN EL DÍA A DÍA.</div>
+
+  <div class="p2-body-cols">
+    <p>El deporte tiene un poder transformador único. Cuando un equipo se mueve junto, compite y celebra, algo esencial cambia en la dinámica. La energía generada en la cancha regresa con ellos a la oficina. Celsux diseña experiencias deportivas corporativas que activan vínculos reales, celebran logros y demuestran que la empresa invierte genuinamente en su gente.</p>
+    <p>No es un día de campo genérico. Es una jornada diseñada con intención: deporte real, competencia real, camaradería real. El tipo de experiencia que el equipo comenta durante semanas. Con 25 años y más de 3.000 eventos producidos, sabemos exactamente qué convierte un evento en un recuerdo que une equipos de verdad.</p>
+  </div>
+
+  <div class="p2-stat">
+    <div class="p2-stat-number">+3.000</div>
+    <div class="p2-stat-label">EVENTOS PRODUCIDOS</div>
+  </div>
+
+  <img src="../../assets/logo-celsux-red.png" class="page-logo" alt="celsux.">
+  <div class="page-number">02 / 09</div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 3 — EL CONCEPTO
+══════════════════════════════════════════ -->
+<div class="page p3">
+  <div class="section-label" style="margin-bottom:20px;">
+    <div class="bar"></div>
+    <span style="color:rgba(245,245,245,0.4);">El concepto</span>
+  </div>
+
+  <div class="p3-red-sq"></div>
+
+  <div class="p3-circles-wrap">
+    <div class="p1-circle" style="width:360px;height:360px;"></div>
+    <div class="p1-circle" style="width:290px;height:290px;"></div>
+    <div class="p1-circle" style="width:220px;height:220px;"></div>
+    <div class="p1-circle" style="width:150px;height:150px;"></div>
+    <div class="p1-circle" style="width:80px;height:80px;"></div>
+  </div>
+
+  <div class="p3-title">
+    TRABAJAR<br>
+    Y JUGAR.<br>
+    EN EL MISMO<br>
+    DÍA.
+  </div>
+
+  <div class="p3-subhead">UNA JORNADA QUE NO SE OLVIDA.</div>
+
+  <div class="p3-body-cols">
+    <div>
+      <p>El concepto es simple pero poderoso: integrar una jornada deportiva de alto impacto en la agenda corporativa regular. Sin complejidad logística. Sin coordinación de tu parte.</p>
+      <p style="margin-top:16px;">No es team building genérico. Es deporte con propósito. Competencia real. Camaradería que se construye en el campo y se sostiene en la oficina durante meses.</p>
+    </div>
+    <div>
+      <p>Diseñamos cada jornada a medida: el deporte, el formato, el espacio, la comunicación. Vos definís el objetivo. Nosotros hacemos que suceda.</p>
+      <p style="margin-top:16px;">Cada jornada queda grabada en la memoria del equipo mucho más que cualquier dinámica de oficina o evento convencional.</p>
+    </div>
+  </div>
+
+  <img src="../../assets/logo-celsux-white.png" class="page-logo" alt="celsux.">
+  <div class="page-number" style="color:rgba(245,245,245,0.35);">03 / 09</div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 4 — DEPORTES
+══════════════════════════════════════════ -->
+<div class="page p4">
+  <div class="section-label">
+    <div class="bar"></div>
+    <span>¿Qué deporte elige tu equipo?</span>
+  </div>
+
+  <div class="p4-headline">DESDE EL PÁDEL DE MODA<br>HASTA EL RUGBY MÁS INTENSO.</div>
+
+  <div class="sports-grid">
+    <div class="sport-card">
+      <div class="sport-num featured-num">01 — DESTACADO</div>
+      <div class="sport-name">PÁDEL</div>
+      <div class="sport-desc">La actividad que lidera el mundo corporativo. Mixto, estratégico, adictivo y accesible para todos los niveles. El deporte del momento.</div>
+      <div class="sport-accent"></div>
+    </div>
+    <div class="sport-card">
+      <div class="sport-num">02</div>
+      <div class="sport-name">FÚTBOL</div>
+      <div class="sport-desc">El clásico que nunca falla. Une equipos de todos los departamentos como ningún otro deporte. Alta participación, emoción garantizada.</div>
+    </div>
+    <div class="sport-card">
+      <div class="sport-num">03</div>
+      <div class="sport-name">TENIS</div>
+      <div class="sport-desc">Competencia individual con espíritu colectivo. Concentración, estrategia y adrenalina en cada punto. Ideal para grupos con nivel.</div>
+    </div>
+    <div class="sport-card">
+      <div class="sport-num">04</div>
+      <div class="sport-name">GOLF</div>
+      <div class="sport-desc">Networking premium en cada hoyo. Para grupos que buscan ritmo propio, conversación real y una experiencia de alto nivel.</div>
+    </div>
+    <div class="sport-card">
+      <div class="sport-num">05</div>
+      <div class="sport-name">BÁSQUET</div>
+      <div class="sport-desc">Dinámica de equipo al máximo. Velocidad, comunicación y trabajo colectivo en tiempo real. Intensa, rápida, efectiva.</div>
+    </div>
+    <div class="sport-card">
+      <div class="sport-num">06</div>
+      <div class="sport-name">RUGBY</div>
+      <div class="sport-desc">El contacto que construye carácter. Disciplina, respeto y el espíritu de equipo en su expresión más pura e intensa.</div>
+    </div>
+  </div>
+
+  <img src="../../assets/logo-celsux-red.png" class="page-logo" alt="celsux.">
+  <div class="page-number">04 / 09</div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 5 — FORMATOS DE EVENTO
+══════════════════════════════════════════ -->
+<div class="page p5">
+  <div class="section-label" style="margin-bottom:24px;">
+    <div class="bar"></div>
+    <span style="color:rgba(245,245,245,0.4);">Formatos de evento</span>
+  </div>
+
+  <div class="p5-title">TRES FORMAS<br>DE USAR EL<br>DEPORTE.</div>
+
+  <div class="formato-item">
+    <div class="formato-num">01</div>
+    <div class="formato-content">
+      <div class="formato-name">INTERNO</div>
+      <div class="formato-desc">Una jornada exclusiva para tu empresa. El equipo compite entre áreas, secciones o equipos internos. Ideal para fortalecer vínculos y celebrar la cultura corporativa.</div>
+    </div>
+  </div>
+
+  <div class="formato-item">
+    <div class="formato-num">02</div>
+    <div class="formato-content">
+      <div class="formato-name">INTEREMPRESAS</div>
+      <div class="formato-desc">Tu equipo compite contra otras empresas del sector. Una experiencia única que combina deporte, networking y posicionamiento como marca empleadora.</div>
+    </div>
+  </div>
+
+  <div class="formato-item">
+    <div class="formato-num">03</div>
+    <div class="formato-content">
+      <div class="formato-name">PARA TUS CLIENTES</div>
+      <div class="formato-desc">Organizás el evento y tus clientes son los protagonistas. Una forma diferente y memorable de fortalecer relaciones comerciales clave.</div>
+    </div>
+  </div>
+
+  <div class="p5-footer">
+    <div class="p5-footer-left">CADA FORMATO SE ADAPTA A TU OBJETIVO Y PRESUPUESTO</div>
+    <div class="p5-footer-brand">CELSUX 360</div>
+  </div>
+
+  <img src="../../assets/logo-celsux-white.png" class="page-logo" alt="celsux.">
+  <div class="page-number" style="color:rgba(245,245,245,0.35);">05 / 09</div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 6 — PRODUCCIÓN INTEGRAL
+══════════════════════════════════════════ -->
+<div class="page p6">
+  <div class="p6-top">
+    <div class="p6-title">TODO LO QUE<br>NECESITÁS,<br>RESUELTO.</div>
+    <div class="p6-callout">
+      <p>NO COORDINÁS NADA.</p>
+      <p>APARECÉS EL DÍA</p>
+      <p>DEL EVENTO.</p>
+    </div>
+  </div>
+
+  <div class="services-grid">
+    <div class="service-item">
+      <div class="service-name">PRODUCCIÓN INTEGRAL</div>
+      <div class="service-desc">COORDINACIÓN COMPLETA DEL EVENTO DE INICIO A FIN, SIN QUE VOS INTERVENGAS EN NADA.</div>
+    </div>
+    <div class="service-item">
+      <div class="service-name">VENUE & ESPACIO</div>
+      <div class="service-desc">BÚSQUEDA Y GESTIÓN DEL ESPACIO IDEAL PARA TU GRUPO Y EL DEPORTE ELEGIDO.</div>
+    </div>
+    <div class="service-item">
+      <div class="service-name">CATERING & HIDRATACIÓN</div>
+      <div class="service-desc">ALIMENTACIÓN DISEÑADA PARA EL DEPORTE: SNACKS, ALMUERZO Y BEBIDAS SEGÚN EL RITMO DEL DÍA.</div>
+    </div>
+    <div class="service-item">
+      <div class="service-name">EQUIPAMIENTO DEPORTIVO</div>
+      <div class="service-desc">TODO EL MATERIAL NECESARIO PARA CADA DEPORTE. EL EQUIPO VIENE LISTO PARA JUGAR.</div>
+    </div>
+    <div class="service-item">
+      <div class="service-name">ÁRBITROS & ANIMADORES</div>
+      <div class="service-desc">PERSONAL ESPECIALIZADO PARA GESTIONAR LA COMPETENCIA Y MANTENER LA ENERGÍA ALTA.</div>
+    </div>
+    <div class="service-item">
+      <div class="service-name">FOTOGRAFÍA & VIDEO</div>
+      <div class="service-desc">REGISTRO PROFESIONAL DEL DÍA PARA COMPARTIR INTERNAMENTE O EN REDES SOCIALES.</div>
+    </div>
+    <div class="service-item">
+      <div class="service-name">COMUNICACIÓN PREVIA</div>
+      <div class="service-desc">INVITACIONES, BRIEF DEL DÍA Y GENERACIÓN DE EXPECTATIVA EN EL EQUIPO.</div>
+    </div>
+    <div class="service-item">
+      <div class="service-name">PREMIOS & RECONOCIMIENTOS</div>
+      <div class="service-desc">TROFEOS, MEDALLAS Y EXPERIENCIAS PARA LOS GANADORES Y TODO EL EQUIPO.</div>
+    </div>
+    <div class="service-item">
+      <div class="service-name">SOPORTE POST-EVENTO</div>
+      <div class="service-desc">FOTOS EDITADAS, REPORTES DE SATISFACCIÓN Y SEGUIMIENTO DEL IMPACTO EN EL EQUIPO.</div>
+    </div>
+    <div class="service-item">
+      <div class="service-name">ADAPTACIÓN A PRESUPUESTO</div>
+      <div class="service-desc">SOLUCIONES FLEXIBLES PARA GRUPOS DE CUALQUIER TAMAÑO Y PRESUPUESTO.</div>
+    </div>
+  </div>
+
+  <img src="../../assets/logo-celsux-white.png" class="page-logo" alt="celsux.">
+  <div class="page-number" style="color:rgba(245,245,245,0.35);">06 / 09</div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 7 — CÓMO TRABAJAMOS
+══════════════════════════════════════════ -->
+<div class="page p7">
+  <div class="section-label">
+    <div class="bar"></div>
+    <span>Cómo trabajamos</span>
+  </div>
+
+  <div class="p7-title">ASÍ ARRANCA.</div>
+  <div class="p7-divider"></div>
+
+  <div class="steps-grid">
+    <div class="step-item">
+      <div class="step-num">01</div>
+      <div class="step-dot"></div>
+      <div class="step-label">PRIMER PASO</div>
+      <div class="step-name">CONTACTO INICIAL</div>
+      <div class="step-desc">Nos contás qué necesitás: tamaño del grupo, fecha tentativa y tipo de experiencia que buscás.</div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">02</div>
+      <div class="step-dot"></div>
+      <div class="step-label">SEGUNDO PASO</div>
+      <div class="step-name">PROPUESTA EN 48HS</div>
+      <div class="step-desc">Te mandamos una propuesta personalizada con opciones de formato, deporte y presupuesto.</div>
+    </div>
+    <div class="step-item" style="border-bottom:none;">
+      <div class="step-num">03</div>
+      <div class="step-dot"></div>
+      <div class="step-label">TERCER PASO</div>
+      <div class="step-name">PRODUCCIÓN</div>
+      <div class="step-desc">Coordinamos todo: venue, logística, catering, equipamiento, comunicación y personal de evento.</div>
+    </div>
+    <div class="step-item" style="border-bottom:none;">
+      <div class="step-num">04</div>
+      <div class="step-dot"></div>
+      <div class="step-label">EL DÍA DEL EVENTO</div>
+      <div class="step-name">VOS APARECÉS</div>
+      <div class="step-desc">Nosotros hacemos que todo funcione a la perfección, de principio a fin. Sin sorpresas.</div>
+    </div>
+  </div>
+
+  <img src="../../assets/logo-celsux-red.png" class="page-logo" alt="celsux.">
+  <div class="page-number">07 / 09</div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 8 — TRAYECTORIA
+══════════════════════════════════════════ -->
+<div class="page p8">
+  <div class="section-label" style="margin-bottom:24px;">
+    <div class="bar"></div>
+    <span style="color:rgba(245,245,245,0.4);">Trayectoria</span>
+  </div>
+
+  <div class="p8-title">EMPRESAS QUE<br>YA LO VIVIERON.</div>
+
+  <div class="clients-row">
+    <div class="client-name">DIRECTV</div>
+    <div class="client-name">MCDONALD'S</div>
+    <div class="client-name">ADIDAS</div>
+    <div class="client-name">LATAM</div>
+    <div class="client-name">GSK</div>
+    <div class="client-name">MERCADO LIBRE</div>
+    <div class="client-name">BBVA</div>
+  </div>
+
+  <div class="logos-placeholder">
+    <div class="logo-box"><div class="logo-box-circle"></div></div>
+    <div class="logo-box"><div class="logo-box-circle"></div></div>
+    <div class="logo-box"><div class="logo-box-circle"></div></div>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-block">
+      <div class="stat-since">DESDE 1999</div>
+      <div class="stat-big">25</div>
+      <div class="stat-unit">AÑOS</div>
+    </div>
+    <div class="stat-block">
+      <div class="stat-since">EXPERIENCIA ACUMULADA</div>
+      <div class="stat-big">+3.000</div>
+      <div class="stat-unit">EVENTOS</div>
+    </div>
+    <div class="stat-block">
+      <div class="stat-since">COBERTURA TOTAL</div>
+      <div class="stat-big">360°</div>
+      <div class="stat-unit">SOPORTE INTEGRAL</div>
+    </div>
+  </div>
+
+  <img src="../../assets/logo-celsux-white.png" class="page-logo" alt="celsux.">
+  <div class="page-number" style="color:rgba(245,245,245,0.35);">08 / 09</div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PAGE 9 — CTA + CONTACTO
+══════════════════════════════════════════ -->
+<div class="page p9">
+  <div class="section-label" style="margin-bottom:24px;">
+    <div class="bar"></div>
+    <span style="color:rgba(245,245,245,0.4);">Comenzamos</span>
+  </div>
+
+  <div class="p9-red-block"></div>
+
+  <div class="p9-title">¿COMENZAMOS<br>A CREAR?</div>
+
+  <div class="p9-subhead">
+    CONTANOS QUÉ TENÉS EN MENTE.<br>
+    EN 48HS TE MANDAMOS UNA PROPUESTA.
+  </div>
+
+  <div class="contact-fields">
+    <div class="contact-field">
+      <div class="contact-arrow">→</div>
+      <div class="contact-field-text">NOMBRE DE LA EMPRESA Y CONTACTO RESPONSABLE</div>
+    </div>
+    <div class="contact-field">
+      <div class="contact-arrow">→</div>
+      <div class="contact-field-text">CANTIDAD ESTIMADA DE PARTICIPANTES</div>
+    </div>
+    <div class="contact-field">
+      <div class="contact-arrow">→</div>
+      <div class="contact-field-text">FECHA TENTATIVA O RANGO DE FECHAS</div>
+    </div>
+    <div class="contact-field">
+      <div class="contact-arrow">→</div>
+      <div class="contact-field-text">TIPO DE DEPORTE O EXPERIENCIA DE INTERÉS</div>
+    </div>
+  </div>
+
+  <div class="p9-footer">
+    <div>
+      <img src="../../assets/logo-celsux-white.png" class="logo-img" style="height:36px;margin-bottom:8px;" alt="celsux.">
+      <div class="p9-brand-sub">PRODUCCIÓN INTEGRAL DE EVENTOS CORPORATIVOS</div>
+    </div>
+    <div class="p9-contact-info">
+      <div class="p9-web">WWW.CELSUX.COM.AR</div>
+      <div class="p9-email">info@celsux.com.ar</div>
+    </div>
+  </div>
+
+  <div class="page-number" style="color:rgba(245,245,245,0.35);">09 / 09</div>
+</div>
+
+</body>
+</html>

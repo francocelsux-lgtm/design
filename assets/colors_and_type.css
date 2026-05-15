@@ -1,0 +1,152 @@
+/* ============================================================
+   CELSUX 360 — Design Tokens v3
+   Anton · Oswald · Open Sans · DM Mono
+   Brand prompt: celsux-brand-prompt.md (April 2026)
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;600;700&family=Open+Sans:wght@300;400&family=DM+Mono:wght@400;500&display=swap');
+
+:root {
+
+  /* ── BRAND COLORS ─────────────────────────────────────── */
+  --color-red:          #E8001D;   /* Only accent — max 20% of piece */
+  --color-red-dark:     #B8001A;   /* Hover state */
+  --color-black:        #0A0A0A;   /* Primary dark bg */
+  --color-white:        #F5F5F5;   /* Primary light bg */
+  --color-gray:         #6B6B6B;   /* Secondary text */
+
+  /* Contextual only — not system colors */
+  --color-ctx-travel:   #003F8A;   /* Incentive travel pieces only */
+  --color-ctx-gala:     #1C2B3A;   /* Evening galas only */
+  --color-ctx-award:    #C4873A;   /* Award galas only */
+
+  /* ── SEMANTIC ROLES ───────────────────────────────────── */
+  --color-bg-dark:      var(--color-black);
+  --color-bg-light:     var(--color-white);
+  --color-accent:       var(--color-red);
+  --color-accent-hover: var(--color-red-dark);
+  --color-fg-primary:   var(--color-black);
+  --color-fg-on-dark:   var(--color-white);
+  --color-fg-secondary: var(--color-gray);
+  --color-border:       rgba(255,255,255,0.1);
+  --color-border-dark:  rgba(10,10,10,0.12);
+
+  /* ── TYPOGRAPHY — FAMILIES ────────────────────────────── */
+  --font-display:   'Anton', 'Impact', sans-serif;
+  --font-headline:  'Oswald', sans-serif;
+  --font-body:      'Open Sans', sans-serif;
+  --font-label:     'DM Mono', 'Courier New', monospace;
+
+  /* ── TYPOGRAPHY — DISPLAY (Anton) ─────────────────────── */
+  --display-transform:  uppercase;
+  --display-tracking:   -0.01em;
+  --display-leading:    0.88;
+  --display-weight:     400;   /* Anton is inherently black */
+  --display-min-size:   72px;  /* NEVER below this */
+
+  /* ── TYPOGRAPHY — HEADLINE (Oswald 700) ───────────────── */
+  --headline-weight:    700;
+  --headline-transform: uppercase;
+  --headline-tracking:  0.02em;
+  --headline-leading:   1.05;
+
+  /* ── TYPOGRAPHY — BODY (Open Sans 300) ───────────────── */
+  --body-weight:   300;
+  --body-size-min: 15px;
+  --body-size-max: 17px;
+  --body-leading:  1.65;
+
+  /* ── TYPOGRAPHY — LABEL (DM Mono) ────────────────────── */
+  --label-size-min: 8px;
+  --label-size-max: 10px;
+  --label-tracking: 0.20em;
+  --label-transform: uppercase;
+
+  /* ── TYPE SCALE ───────────────────────────────────────── */
+  --text-label:  9px;
+  --text-sm:     13px;
+  --text-base:   16px;    /* Open Sans body */
+  --text-md:     17px;
+  --text-lg:     20px;
+  --text-xl:     28px;
+  --text-2xl:    40px;
+  --text-3xl:    64px;
+  --text-4xl:    96px;
+  --text-5xl:    128px;
+  --text-hero:   180px;
+
+  /* ── BORDER RADIUS ────────────────────────────────────── */
+  --radius-none:   0;           /* Photos, red blocks, structural */
+  --radius-card:   12px;        /* Cards */
+  --radius-panel:  20px;        /* Large panels */
+  --radius-pill:   999px;       /* ALL buttons */
+
+  /* ── SHADOWS ──────────────────────────────────────────── */
+  --shadow-card:    0 8px 32px rgba(10,10,10,0.18);
+  --shadow-hover:   0 16px 48px rgba(10,10,10,0.28);
+  --shadow-red:     0 8px 32px rgba(232,0,29,0.25);
+
+  /* ── SPACING ──────────────────────────────────────────── */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
+  --space-32: 128px;
+
+  /* ── ANIMATION ────────────────────────────────────────── */
+  --ease-out:    cubic-bezier(0.0, 0.0, 0.2, 1.0);
+  --duration-fast: 140ms;
+  --duration-base: 260ms;
+  --duration-slow: 420ms;
+
+  /* ── NAV ──────────────────────────────────────────────── */
+  --nav-bg: rgba(10, 10, 10, 0.90);
+  --nav-blur: blur(12px);
+  --nav-height: 64px;
+
+  /* ── OVERLAYS ─────────────────────────────────────────── */
+  --overlay-red-40: rgba(232, 0, 29, 0.40);
+  --overlay-red-55: rgba(232, 0, 29, 0.55);
+  --overlay-dark:   rgba(10, 10, 10, 0.70);
+
+  /* ── GHOST NUMBER ─────────────────────────────────────── */
+  --ghost-opacity:  0.05;   /* Anton stroke-only, 0.04–0.06 */
+  --ghost-stroke:   1px;
+}
+
+/* ── BASE ─────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  font-family:      var(--font-body);
+  font-weight:      var(--body-weight);
+  font-size:        var(--text-base);
+  line-height:      var(--body-leading);
+  color:            var(--color-black);
+  background:       var(--color-white);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── EYEBROW PATTERN ──────────────────────────────────────── */
+/* Usage: <span class="eyebrow">SECTION LABEL</span>         */
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family:    var(--font-label);
+  font-size:      var(--text-label);
+  letter-spacing: var(--label-tracking);
+  text-transform: var(--label-transform);
+  color:          var(--color-red);
+}
+.eyebrow::before {
+  content: '────';
+  opacity: 0.7;
+  letter-spacing: -0.05em;
+}
