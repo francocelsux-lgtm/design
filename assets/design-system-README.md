@@ -70,10 +70,10 @@
 ### Typography
 | Level | Fonts | Style |
 |-------|-------|-------|
-| DISPLAY | Bebas Neue, Oswald ExtraBold, Anton | Ultra-bold condensed, UPPERCASE, large scale |
+| DISPLAY | Anton | Ultra-bold condensed, UPPERCASE, large scale |
 | HEADLINE | Oswald Bold, similar condensed bold | Bold, tight tracking |
-| BODY | DM Sans, Open Sans | Regular/Light, high legibility |
-| LABEL | Mono or condensed regular | Small, data/tags/numbering |
+| BODY | Open Sans | Regular/Light, high legibility |
+| LABEL | DM Mono | Small, data/tags/numbering |
 
 - Typography IS a design element, not just text
 - Extreme size contrast (120pt title with 14pt caption in same piece)
