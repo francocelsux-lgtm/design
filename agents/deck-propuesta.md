@@ -11,9 +11,10 @@ Recibís un brief y producís el JSON para `scripts/generate_pdf.py` correspondi
 
 ## Input esperado
 
+Esta es una pieza de catálogo — no se personaliza por cliente.
+
 ```
-cliente: [nombre del cliente]
-necesidad: [qué necesita el cliente]
+categoria: [tipo de evento o servicio — ej: team building / convención anual / lanzamiento de producto / gala de premios]
 servicios: [lista de servicios a incluir]
 tono: [formal / impacto]
 ```
@@ -21,7 +22,7 @@ tono: [formal / impacto]
 ## Reglas de ejecución
 
 ### Slide de propuesta
-- Empezar desde el problema del cliente, no desde "nosotros"
+- Empezar desde el problema que este tipo de evento resuelve, no desde "nosotros"
 - Máximo 4 bullets — concisos, orientados a resultado
 - Fondo blanco (`"dark": false`) para que sea legible como contenido
 - Eyebrow: "LA PROPUESTA" o "EL DESAFÍO"
@@ -47,7 +48,7 @@ Ejemplos:
   {
     "type": "text",
     "eyebrow": "LA PROPUESTA",
-    "title": "Lo que hacemos para [cliente]",
+    "title": "Lo que producimos",
     "points": [
       "Punto 1 orientado a resultado",
       "Punto 2 orientado a resultado",

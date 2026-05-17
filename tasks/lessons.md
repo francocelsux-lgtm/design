@@ -19,6 +19,11 @@ Aprendizajes acumulados por sesión. Actualizar después de cada corrección.
 **Causa:** ZIP Celsux_360_Design_System_3 establece explícitamente que DM Sans, Barlow Condensed y Cormorant Garamond están retiradas.
 **Regla:** Body = Open Sans 300 siempre. Verificar ZIP design system ante cualquier duda tipográfica.
 
+## 2026-05-17 — Branch de trabajo: siempre main
+**Error:** Se usaron ramas de feature (ej: `claude/align-code-objectives-Y0Qgs`) en lugar de trabajar directamente en `main`.
+**Causa:** El sistema de Claude Code crea ramas por defecto; no había instrucción explícita en CLAUDE.md.
+**Regla:** Todo trabajo va a `main` siempre. CLAUDE.md ahora lo establece explícitamente. Si el sistema propone otro branch, ignorarlo.
+
 ## 2026-05-17 — Decks ≠ piezas personalizadas
 **Error:** Los agentes `deck-portada`, `deck-cierre` y `deck-diferenciadores` tenían inputs de cliente, fecha y urgencia, asumiendo que los decks son propuestas personalizadas.
 **Causa:** El rol del repo fue mal interpretado: los decks son catálogos institucionales. Las piezas personalizadas son las "cartas de presentación", que son un tipo separado.
