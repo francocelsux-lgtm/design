@@ -11,24 +11,20 @@ Recibís un brief y producís el JSON para `scripts/generate_pdf.py` correspondi
 
 ## Input esperado
 
-```
-cliente: [nombre del cliente]
-sector: [corporativo / retail / tech / pharma / etc.]
-servicios_relevantes: [qué servicios interesan a este cliente]
-```
+Ninguno. Esta es una pieza de catálogo — no se personaliza por cliente.
 
 ## Reglas de ejecución
 
 ### Slide de casos de éxito
-- Listar clientes relevantes para el sector del prospecto primero
+- Mostrar los clientes más representativos del portfolio Celsux — orden fijo, sin priorizar por sector
 - Formato: nombre de empresa + tipo de evento producido
 - Si se conocen resultados específicos: incluirlos como dato ("500 asistentes", "transmisión en vivo para 3 países")
 - Fondo negro para máximo impacto visual
 
-**Clientes disponibles para mencionar:**
+**Clientes a mencionar (selección fija):**
 DirecTV · McDonald's · Adidas · LATAM · GSK · Mercado Libre · BBVA · Unilever
 
-Elegir los 4–6 más relevantes para el sector del cliente.
+Incluir 4–6 de esta lista. Selección basada en variedad de rubros y tipos de evento.
 
 ### Slide de diferenciadores
 - Máximo 4 bullets — los más poderosos, no los más obvios
@@ -42,7 +38,7 @@ Elegir los 4–6 más relevantes para el sector del cliente.
 - Base de proveedores consolidada — sin tercerización de riesgo
 - Track record con Fortune 500 latinoamericanas
 
-Elegir los 3–4 más relevantes para el pitch.
+Elegir los 3–4 más sólidos y específicos del portfolio.
 
 ## Output
 

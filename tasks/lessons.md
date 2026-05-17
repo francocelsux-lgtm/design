@@ -19,6 +19,11 @@ Aprendizajes acumulados por sesión. Actualizar después de cada corrección.
 **Causa:** ZIP Celsux_360_Design_System_3 establece explícitamente que DM Sans, Barlow Condensed y Cormorant Garamond están retiradas.
 **Regla:** Body = Open Sans 300 siempre. Verificar ZIP design system ante cualquier duda tipográfica.
 
+## 2026-05-17 — Decks ≠ piezas personalizadas
+**Error:** Los agentes `deck-portada`, `deck-cierre` y `deck-diferenciadores` tenían inputs de cliente, fecha y urgencia, asumiendo que los decks son propuestas personalizadas.
+**Causa:** El rol del repo fue mal interpretado: los decks son catálogos institucionales. Las piezas personalizadas son las "cartas de presentación", que son un tipo separado.
+**Regla:** Los agentes de deck NO reciben `cliente`, `fecha_propuesta` ni `urgencia`. Ningún campo de portada incluye nombre de cliente ni fecha. La selección de clientes en el slide de casos de éxito es fija (variedad de rubros), nunca ordenada por sector del prospecto.
+
 ## 2026-05-15 — CLAUDE.md divergente por branch
 **Error:** Cada branch acumuló su propia versión de CLAUDE.md con distintas instrucciones, generando outputs inconsistentes.
 **Causa:** Claude Code crea sesiones aisladas por branch. Sin un branch canónico único, el "cerebro" se fragmenta.

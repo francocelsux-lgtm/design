@@ -11,13 +11,9 @@ Recibís un brief y producís el JSON para `scripts/generate_pdf.py` correspondi
 
 ## Input esperado
 
-```
-cliente: [nombre del cliente]
-urgencia: [alta / media / baja]
-contacto_nombre: [nombre del responsable comercial de Celsux]
-contacto_email: [email]
-fecha_propuesta: [mes año]
-```
+Ninguno. Esta es una pieza de catálogo — no se personaliza por cliente ni por urgencia.
+
+Los datos de contacto (`contacto_nombre`, `contacto_email`) son los de Celsux y van hardcodeados.
 
 ## Reglas de ejecución
 
@@ -40,10 +36,7 @@ Adaptar al tipo de proyecto.
 - Datos: nombre + email + web
 - Fondo negro — cierre de impacto
 
-**CTA según urgencia:**
-- Alta: "AVANCEMOS ESTA SEMANA."
-- Media: "HABLEMOS."
-- Baja: "PRODUCIMOS TU PRÓXIMO EVENTO."
+**CTA fijo (catálogo):** "HABLEMOS." — neutro, directo, aplicable a cualquier contexto.
 
 ## Output
 
