@@ -12,11 +12,12 @@ Recibís un brief y producís el JSON para `scripts/generate_pdf.py` correspondi
 ## Input esperado
 
 ```
-cliente: [nombre del cliente]
-tipo_pieza: [propuesta / pitch / presentación de servicio]
-fecha: [mes año]
+tipo_pieza: [catálogo de servicios / presentación institucional / deck de categoría]
 evento_o_servicio: [descripción]
 ```
+
+Esta es una pieza de catálogo — no lleva nombre de cliente ni fecha de propuesta.
+Las cartas de presentación son las piezas personalizadas; este deck no lo es.
 
 ## Reglas de ejecución
 
@@ -24,7 +25,7 @@ evento_o_servicio: [descripción]
 - Título: MAYÚSCULAS, máximo 4 palabras, impacto directo
 - Subtítulo: una línea que complementa, no repite
 - Eyebrow: siempre "CELSUX 360"
-- Si hay nombre de cliente: incluir en el campo `client`
+- Sin campo `client` ni `date` — no es una pieza personalizada
 
 ### Slide de stats
 - Stats fijos de empresa: 25+ años, 3.000+ eventos, 360° servicios
@@ -41,8 +42,6 @@ Devolver el JSON listo para los dos slides:
     "type": "cover",
     "title": "TÍTULO EN MAYÚSCULAS",
     "subtitle": "Descripción en una línea",
-    "client": "Nombre del cliente",
-    "date": "Mes Año",
     "eyebrow": "CELSUX 360"
   },
   {
